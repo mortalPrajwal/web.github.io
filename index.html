@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover">
+	<title>Instagram</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="shortcut icon" type="image/x-icon" href="images/icon8.png" >
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css">
+</head>
+<body >
+
+<div id="wrapper">
+	
+
+	<div class="insterBody" id="header">
+ <div class="phone">
+ 	<span class="screen">
+ 		<img src="images/img6.jpg" alt="" class="img">
+ 		<img src="images/img2.jpg" alt="" class="img">
+ 		<img src="images/img3.jpg" alt="" class="img">
+ 		<img src="images/img4.jpg" alt="" class="img">
+ 		<img src="images/img5.jpg" alt="" class="img">
+ 	</span>
+ 	
+ </div>
+
+ <div class="formCover  " id="login">
+ 	<form class="form " action="index2.html" method="POST" >
+ 		<img src="images/logo.png" alt="" class="insterLogo">
+ 		<div class="inputBody">
+ 			<p class="userLabel">Phone number, username, or email</p>
+ 			<input type="text" class="inputField userInput" onkeyup="userField()" oninput="loginClickable()" id="user" autocomplete="off" minlength="10" maxlength="15" required
+ 		 >
+ 		</div>
+ 		<div class="inputBody">
+ 			<p class="passLabel">Password</p>
+ 			<span class="showHide hide" onclick="pwddisplay()" id="tero">SHOW</span>
+ 			<input type="Password" class="inputField passInput" onkeyup="passField()" oninput="loginClickable()" id="pass" minlength="8" maxlength="12" required>
+ 		</div>
+
+ 		<button  class="loginBtn" onclick="validate()" disabled>Log in</button>
+<P class="alternative">OR</P>
+<a href="#" class="facebookLogin" onclick="popup()"><img class="fbko" src="images/fb.png" alt="">Log in with Facebook</a>
+<span class="error"></span>
+<a href="#" class="forgot" onclick="forgot()">Forgot password?</a>
+ 	</form>
+ 	<div class="signUp">
+ 		<p>Don't have an account?<a href="#" id="linkCreateAccount">Sign Up</a></p>
+ 	</div>
+ 	<div class="getApp">
+ 		<span>Get the app.</span>
+ 	</div>
+ 	<div class="badges">
+ 		<span class="appStore">
+ 			<a href="https://apps.apple.com/app/instagram/id389801252?vt=lo" target="_blank"><img src="images/instako.png"></a>
+ 		</span>
+ 		<span class="playStore">
+ 			<a href="https://play.google.com/store/apps/details?id=com.instagram.android&referrer=utm_source%3Dinstagramweb%26utm_campaign%3DloginPage%26ig_mid%3D9B34E756-EE04-4DD6-8596-EAC374864D6E%26utm_content%3Dlo%26utm_medium%3Dbadge" target="_blank"><img src="images/instakai.png"></a>
+ 		</span>
+ 	</div>
+ </div>
+	</div>
+	<div class="formCover form--hidden" id="CreateAccount">
+ 	<form class="form" id="form" action="index2.html">
+ 		<img src="images/logo.png" alt="" class="insterLogo">
+ 		<P class="upwala">Sign up to see photos and videos from your friends.</P>
+ 		<div class="inputBody">
+ 			<p class="userLabel2">Moblie Number</p>
+ 			<input type="number email" class="inputField userInput2" onkeyup="userField2()" oninput="loginClickable2()" id="user2" autocomplete="off"  minlength="10" maxlength="10"
+ 		 >
+ 		 <i class="far fa-times-circle u_times"></i>
+ 		 <i class="far fa-check-circle u_check"></i>
+ 		
+ 		</div>
+ 		<div class="inputBody">
+ 			<p class="nameLabel">Full Name</p>
+ 			<input type="text" class="inputField nameInput" onkeyup="nameField()" oninput="loginClickable2()" id="name" autocomplete="off" minlength="8" maxlength="16"
+ 		 >
+ 		 <i class="far fa-times-circle p_times"></i>
+ 		 <i class="far fa-check-circle p_check"></i>
+ 	
+ 		</div>
+ 		<div class="inputBody">
+ 			<p class="usernameLabel">Username</p>
+ 			<input type="text" class="inputField usernameInput" onkeyup="usernameField()" oninput="loginClickable2()" id="username" autocomplete="off" minlength="9" maxlength="12"
+ 		 >
+ 		 <i class="far fa-times-circle q_times"></i>
+ 		 <i class="far fa-check-circle q_check"></i>
+ 		 
+ 		</div>
+ 		<div class="inputBody">
+ 			<p class="passLabel2">Password</p>
+ 			<!-- <span class="showHide hide" onclick="pwddisplay()" id="tero">SHOW</span> -->
+ 			<input type="Password" class="inputField passInput2" onkeyup="passField2()" oninput="loginClickable2()" id="pass2" minlength="1" maxlength="12">
+ 			
+
+ 			<span class="showHide2 hide" onclick="pwddisplay2()">SHOW</span>
+ 		</div>
+
+ 		<button class="signBtn" disabled onclick="signup()">Sign Up</button>
+
+
+
+ 	</form>
+ 	<div class="signUp">
+ 		<p>Already have an account?<a href="#" id="linkLogin">Log in</a></p>
+ 	</div>
+ 	<div class="getApp">
+ 		<span>Get the app.</span>
+ 	</div>
+ 	<div class="badges">
+ 		<span class="appStore">
+ 			<a href="https://apps.apple.com/app/instagram/id389801252?vt=lo" target="_blank"><img src="images/instako.png"></a>
+ 		</span>
+ 		<span class="playStore">
+ 			<a href="https://play.google.com/store/apps/details?id=com.instagram.android&referrer=utm_source%3Dinstagramweb%26utm_campaign%3DloginPage%26ig_mid%3D9B34E756-EE04-4DD6-8596-EAC374864D6E%26utm_content%3Dlo%26utm_medium%3Dbadge" target="_blank"><img src="images/instakai.png"></a>
+ 		</span>
+ 	</div>
+ </div>
+	</div>
+</div>
+</div>
+<footer>
+
+	<center>
+	<div class="container">
+		<nav class="footer-nav">
+		<ul>
+        <li>
+          <a href="https://about.instagram.com/" target="_blank">About</a>
+
+         </li>
+         <li>
+          <a href="https://about.instagram.com/blog" target="_blank">Blog</a>
+
+         </li>
+         <li>
+          <a href="https://www.instagram.com/about/jobs/" target="_blank">Jobs</a>
+
+         </li>
+         <li>
+          <a href="https://www.instagram.com/developer/" target="_blank">API</a>
+
+         </li>
+         <li>
+          <a href="https://help.instagram.com/" target="_blank">Help</a>
+
+         </li>
+         <li>
+          <a href="https://help.instagram.com/519522125107875" target="_blank">Privacy</a>
+
+         </li>
+         <li>
+          <a href="https://help.instagram.com/581066165581870" target="_blank">Terms</a>
+
+         </li>
+         <li>
+          <a href="https://www.instagram.com/directory/profiles/" target="_blank">Top Accounts</a>
+
+         </li>
+         <li>
+          <a href="https://www.instagram.com/explore/locations/" target="_blank">Locations</a>
+
+         </li>
+         <li>
+          <a href="https://www.instagram.com/directory/hashtags/" target="_blank">Hashtags</a>
+
+         </li>
+         <li>
+          <a href="#">Beauty</a>
+
+         </li>
+         <li>
+          <a href="https://www.instagram.com/topics/dance-and-performance/" target="_blank">Dance & Perfomance</a>
+
+         </li>
+         <li>
+          <a href="#" >Fitness </a>
+
+         </li>
+         <li>
+          <a href="https://www.instagram.com/topics/food-and-drink/" target="_blank">Food & Drink </a>
+
+         </li>
+         <li>
+          <a href="https://www.instagram.com/topics/home-and-garden/" target="_blank">Home & Garden </a>
+
+         </li>
+         <li>
+          <a href="https://www.instagram.com/topics/music/" target="_blank">Music </a>
+
+         </li>
+         <li>
+          <a href="https://www.instagram.com/topics/visual-arts/" target="_blank"> Visual Arts</a>
+
+         </li>
+      </ul>
+	</nav>
+	<div class="copyright-notice">
+		© 2020 Instagram from Facebook
+	</div>
+	</div>
+</center>
+
+</footer>
+
+
+</body>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script type="text/javascript">
+
+// login and register
+document.addEventListener("DOMContentLoaded", () => {
+ const loginForm=document.querySelector("#login");
+ const createAccountForm=document.querySelector("#CreateAccount");
+
+ document.querySelector("#linkCreateAccount").addEventListener("click", e =>{
+ 	e.preventDefault();
+ 	loginForm.classList.add("form--hidden");
+ 	createAccountForm.classList.remove("form--hidden");
+ });
+ document.querySelector("#linkLogin").addEventListener("click", e =>{
+ 	loginForm.classList.remove("form--hidden");
+ 	createAccountForm.classList.add("form--hidden");
+ });
+});
+
+
+
+
+// var preloader=document.getElementById('loading');
+// function load(){
+// 	preloader.style.display="none"
+// }
+
+
+
+
+
+
+//end//
+function forgot(){
+	swal("Your password is 123456789");
+}
+function popup(){
+	swal("SORRY!", "This feature is not available now because of some technical issues", "warning");
+}
+function signup(){
+	let user=document.querySelector("#user2");
+	let name=document.querySelector("#name").value;
+	let username=document.querySelector("#username").value;
+	let pass=document.querySelector("#pass2");
+	if (user.value.length==10||name.value.length>=1||username.value.length>=1||pass.value.length>=1) {
+
+		swal("OOPS!", "You fed invalid data MR."+name, "error");
+	}
+
+
+}
+// style wala
+var user2=document.querySelector('#user2');
+user2.addEventListener('keyup',function(){
+	var u_check=document.querySelector('.u_check');
+	var u_times=document.querySelector('.u_times');
+	if (user2.value.length==0||user2.value.length<=9) {
+
+		u_check.style.display='none';
+		u_times.style.display='block';
+		return(false);
+	}
+	else{
+		u_check.style.display='block';
+		u_times.style.display='none';
+	}
+});
+var name2=document.querySelector('#name');
+name2.addEventListener('keyup',function(){
+	var u_check=document.querySelector('.p_check');
+	var u_times=document.querySelector('.p_times');
+	if (name2.value.length==0||name2.value.length<=7) {
+
+		u_check.style.display='none';
+		u_times.style.display='block';
+		return(false);
+	}
+	else{
+		u_check.style.display='block';
+		u_times.style.display='none';
+	}
+});
+var username=document.querySelector('#username');
+username.addEventListener('keyup',function(){
+	var u_check=document.querySelector('.q_check');
+	var u_times=document.querySelector('.q_times');
+	if (username.value.length==0||username.value.length<=8) {
+
+		u_check.style.display='none';
+		u_times.style.display='block';
+		return(false);
+	}
+	else{
+		u_check.style.display='block';
+		u_times.style.display='none';
+	}
+});
+
+//end//
+let counter=0;
+	let images=document.querySelectorAll(".img");
+
+	showImages(counter);
+	function showImages(n) {
+		images[n].style.display="block";
+
+	}
+
+	setInterval(imageDisplay, 5000);
+	function imageDisplay(){
+		images[counter].style.display="none";
+		counter++;
+		if(counter==images.length){
+			counter=0;
+		}
+		images[counter].classList.add('fader');
+		showImages(counter);
+	}
+
+		function userField(){
+			let userInput=document.querySelector(".userInput");
+			let userLabel=document.querySelector(".userLabel");
+			if(userInput.value.length == 0){
+				userLabel.style.transform="translateY(0px) scale(1,1)";
+
+			}
+			else if(userInput.value.length >=1){
+userLabel.style.transform="translateY(-10px) scale(0.9,0.9)";
+			}
+
+		}
+
+		function passField() {
+		let passInput=document.querySelector(".passInput");
+			let passLabel=document.querySelector(".passLabel");
+			if(passInput.value.length == 0){
+				passLabel.style.transform="translateY(0px) scale(1,1)";
+
+			}
+			else if(passInput.value.length >=1){
+passLabel.style.transform="translateY(-10px) scale(0.9,0.9)";
+			}
+
+		}
+		function loginClickable(){
+			let  passInput=document.querySelector(".passInput").value;
+			let userInput=document.querySelector(".userInput").value;
+			let loginBtn=document.querySelector(".loginBtn");
+			let error=document.querySelector('.error');
+			if (userInput=="9817364940"&& passInput=="123456789") {
+				loginBtn.disabled=false;
+				loginBtn.style.backgroundColor="#0094f6";
+				loginBtn.style.cursor="pointer";
+				return(false);
+
+			}
+			else if (userInput.value.length<=10|| passInput.value.length<=9) {
+				loginBtn.disabled=true;
+				loginBtn.style.backgroundColor="#0094f669";
+				loginBtn.style.cursor="default";
+				// return(false);
+
+			}
+
+			
+
+		}
+	function pwddisplay(){
+		let passInput=document.querySelector(".passInput");
+		let showHide=document.querySelector(".showHide");
+		if (passInput.type==="password") {
+			passInput.type="text";
+			showHide.innerHTML="HIDE";
+
+		}
+		else{
+			passInput.type="password";
+			showHide.innerHTML="SHOW";
+		}
+	}
+// 	 const showHide=document.querySelector(".showHide");
+// 	 const passInput=document.querySelector("#pass");
+// 	 pass.addEventListener('click',()=>{
+
+// showHide.classList.remove('hide');
+// 	 })
+
+// sign up ko lagi//
+function userField2(){
+			let userInput2=document.querySelector(".userInput2");
+			let userLabel2=document.querySelector(".userLabel2");
+			if(userInput2.value.length == 0){
+				userLabel2.style.transform="translateY(0px) scale(1,1)";
+
+			}
+			else if(userInput2.value.length >=1){
+userLabel2.style.transform="translateY(-10px) scale(0.9,0.9)";
+			}
+
+		}
+		function nameField(){
+			let nameInput=document.querySelector(".nameInput");
+			let nameLabel=document.querySelector(".nameLabel");
+			if(nameInput.value.length == 0){
+				nameLabel.style.transform="translateY(0px) scale(1,1)";
+
+			}
+			else if(nameInput.value.length >=1){
+nameLabel.style.transform="translateY(-10px) scale(0.9,0.9)";
+			}
+
+		}
+		function usernameField(){
+			let usernameInput=document.querySelector(".usernameInput");
+			let usernameLabel=document.querySelector(".usernameLabel");
+			if(usernameInput.value.length == 0){
+				usernameLabel.style.transform="translateY(0px) scale(1,1)";
+
+			}
+			else if(usernameInput.value.length >=1){
+usernameLabel.style.transform="translateY(-10px) scale(0.9,0.9)";
+			}
+
+		}
+		function passField2(){
+			let passInput2=document.querySelector(".passInput2");
+			let passLabel2=document.querySelector(".passLabel2");
+			if(passInput2.value.length == 0){
+				passLabel2.style.transform="translateY(0px) scale(1,1)";
+
+			}
+			else if(passInput2.value.length >=1){
+passLabel2.style.transform="translateY(-10px) scale(0.9,0.9)";
+			}
+
+		}
+		function loginClickable2(){
+			let  passInput2=document.querySelector(".passInput2");
+			let  nameInput=document.querySelector(".nameInput");
+			let  usernameInput=document.querySelector(".usernameInput");
+			let userInput2=document.querySelector(".userInput2");
+			let signBtn=document.querySelector(".signBtn");
+			let error=document.querySelector('.error');
+			if (userInput2.value.length==0||passInput2.value.length==0||usernameInput.value.length==0||nameInput.value.length==0) {
+				signBtn.disabled=true;
+				signBtn.style.backgroundColor="#0094f669";
+				signBtn.style.cursor="default";
+				return(false);
+			
+
+			}
+			else if (userInput2.value.length==10||passInput2.value.length==10||usernameInput.value.length==10||nameInput.value.length==10) {
+				signBtn.disabled=false;
+				signBtn.style.backgroundColor="#0094f6";
+				signBtn.style.cursor="pointer";
+				return(false);
+			
+			}
+			
+			
+
+		}
+function pwddisplay2(){
+		let passInput2=document.querySelector(".passInput2");
+		let showHide2=document.querySelector(".showHide2");
+		if (passInput2.type==="password") {
+			passInput2.type="text";
+			showHide2.innerHTML="HIDE";
+
+		}
+		else{
+			passInput2.type="password";
+			showHide2.innerHTML="SHOW";
+		}
+	}
+ const showHide2=document.querySelector(".showHide2");
+	 const passInput2=document.querySelector("#pass2");
+	 pass2.addEventListener('click',()=>{
+showHide2.classList.remove('hide');
+	 })
+
+
+</script>
+</html>
